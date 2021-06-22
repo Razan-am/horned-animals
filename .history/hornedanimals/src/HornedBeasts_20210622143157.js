@@ -27,7 +27,6 @@ class HornedBeasts extends Component {
             </Card.Body>
           </Card>
           </Col>
-        )}
-}
+    }
 
 export default HornedBeasts;

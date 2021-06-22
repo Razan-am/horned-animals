@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Card,Button,Col } from 'react-bootstrap';
 
 class HornedBeasts extends Component {
@@ -27,7 +28,19 @@ class HornedBeasts extends Component {
             </Card.Body>
           </Card>
           </Col>
-        )}
+=======
+
+class HornedBeasts extends Component {
+    render() {
+        return (
+            <div>
+                <h2>{this.props.title}</h2>
+                <img src={this.props.image_url} alt={this.props.title}/>
+                <p>{this.props.description}</p>
+            </div>
+>>>>>>> dd22af2dd7503643fffc982ebcac824058145b80
+        );
+    }
 }
 
 export default HornedBeasts;
