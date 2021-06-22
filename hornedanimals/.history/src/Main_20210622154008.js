@@ -5,17 +5,6 @@ import { Row } from 'react-bootstrap';
 
 
 class Main extends React.Component {
-
-    showModal = () => {
-        this.setState({ show: true });
-      };
-    
-      hideModal = () => {
-        this.setState({ show: false });
-      };
-      dataFunction = () => {
-        this.setState({ show: this.props.updateState(this.state.show)});
-      }
     render() {
 
         let likes = [];
@@ -23,6 +12,14 @@ class Main extends React.Component {
         let likeIncreas = (likeNumber) => {
             return likeNumber +1;
         };
+
+        showing = ()=> {
+            const [show, setShow] = useState(false);
+          
+            const handleClose = () => setShow(false);
+            const handleShow = () => setShow(true);
+          };
+        
         return (
             <Row>
                 {
@@ -30,7 +27,7 @@ class Main extends React.Component {
                  hornedBeastList.map((beast,index) =>{
                     return <HornedBeasts 
                     key ={index} title={beast.title} image_url={beast.image_url} likes={likes}
-                    likeNumber={0} raisLikes={likeIncreas} updateState={this.modal} description={beast.description} />;
+                    likeNumber={0} raisLikes={likeIncreas} updateState={Modal} description={beast.description} />;
    
                  })
                 

@@ -8,20 +8,33 @@ import { Container } from 'react-bootstrap';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+
+
+  constructor() {
+    super();
     this.state = {
-      show: false,
+      show: props.show,
     };
   }
+
   
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+  dataFunction = () => {
+    this.setState({ show: this.props.updateState(this.state.show) });
+  }
   render() {
     return (
       <>
         <Header />
         <Container>
-          <SelectedBeast />
           <Main />
+          <SelectedBeast />
         </Container>
         <Footer />
 

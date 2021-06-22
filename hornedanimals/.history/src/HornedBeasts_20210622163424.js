@@ -26,7 +26,8 @@ class HornedBeasts extends Component {
             </Card.Text>
             <Button variant="primary" onClick={this.increasing}>Likes</Button>
             <span text={'light'}>{this.state.likeNumber}</span>
-            <Button variant="primary" onClick={this.show}>Details</Button>
+            <Button variant="primary" onClick={  dataFunction = () => {
+}>Details</Button>
           </Card.Body>
         </Card>
       </Col>

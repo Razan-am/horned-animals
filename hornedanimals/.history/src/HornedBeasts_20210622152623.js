@@ -12,8 +12,10 @@ class HornedBeasts extends Component {
   increasing = () => {
     this.setState({ likeNumber: this.props.raisLikes(this.state.likeNumber) });
   }
-
-
+  
+  increasing = () => {
+    this.setState({ likeNumber: this.props.raisLikes(this.state.likeNumber) });
+  }
   render() {
     return (
       <Col>
@@ -26,7 +28,7 @@ class HornedBeasts extends Component {
             </Card.Text>
             <Button variant="primary" onClick={this.increasing}>Likes</Button>
             <span text={'light'}>{this.state.likeNumber}</span>
-            <Button variant="primary" onClick={this.show}>Details</Button>
+            <Button variant="primary" onClick={this.showModal}>Details</Button>
           </Card.Body>
         </Card>
       </Col>

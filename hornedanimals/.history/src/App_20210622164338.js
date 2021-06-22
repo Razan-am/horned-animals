@@ -8,13 +8,26 @@ import { Container } from 'react-bootstrap';
 
 
 class App extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
       show: false,
     };
   }
+
   
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+  dataFunction = () => {
+    this.setState({ show: this.props.updateState(this.state.show)});
+  }
   render() {
     return (
       <>

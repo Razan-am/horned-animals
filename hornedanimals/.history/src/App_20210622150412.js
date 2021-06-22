@@ -2,17 +2,22 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import SelectedBeast from './SelectedBeast';
+import hornedBeastList from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
 
 class App extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      likeNumber: props.likeNumber,
     };
+  }
+
+  increasing = () => {
+    this.setState({ likeNumber: this.props.raisLikes(this.state.likeNumber) });
   }
   
   render() {
@@ -20,7 +25,6 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <SelectedBeast />
           <Main />
         </Container>
         <Footer />

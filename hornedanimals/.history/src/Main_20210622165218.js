@@ -5,7 +5,12 @@ import { Row } from 'react-bootstrap';
 
 
 class Main extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+          show: false,
+        };
+      }
     showModal = () => {
         this.setState({ show: true });
       };

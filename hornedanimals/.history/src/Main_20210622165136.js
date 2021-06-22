@@ -5,6 +5,13 @@ import { Row } from 'react-bootstrap';
 
 
 class Main extends React.Component {
+    const modal = (show) => {
+        if (show === true){
+            return this.showModal;
+        }else{
+            return this.hideModal;
+        }
+    };
 
     showModal = () => {
         this.setState({ show: true });
