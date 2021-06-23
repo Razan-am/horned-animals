@@ -14,7 +14,7 @@ class SelectedBeast extends Component {
         return (
             <>
 
-                <Modal show={this.props.showData} onHide={this.props.modalData}></Modal>
+                <Modal show={modal} onHide={this.hideModal}></Modal>
                 <Modal.Dialog>
                     <Modal.Header closeButton>
                         <Modal.Title>{this.props.title}</Modal.Title>

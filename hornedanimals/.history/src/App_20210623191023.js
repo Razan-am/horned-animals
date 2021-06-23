@@ -4,7 +4,7 @@ import Main from './Main';
 import Footer from './Footer';
 import hornedBeastList from './data.json';
 import SelectedBeast from './SelectedBeast';
-
+import HornedBeasts from './HornedBeasts';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
@@ -28,7 +28,7 @@ class App extends React.Component {
   dataClose = (data) =>{
     this.setState({
       show:false,
-    });
+    })
   }
   
   render() {
@@ -36,10 +36,11 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <Main SelectedBeast ={this.dataShow} data ={this.state.honesData}/>
-          <SelectedBeast dataClose={this.dataClose} showData={this.state.show} modalData={this.state.modalData} />
+          <Main  />
+          <SelectedBeast />
         </Container>
         <Footer />
+
       </>
     );
   }

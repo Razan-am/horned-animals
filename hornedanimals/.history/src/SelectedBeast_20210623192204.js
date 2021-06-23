@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HornedBeasts from './HornedBeasts.js';
+import HornedBeasts from './HornedBeasts';
 import { Modal, Button } from 'react-bootstrap';
 
 class SelectedBeast extends Component {
@@ -14,7 +14,7 @@ class SelectedBeast extends Component {
         return (
             <>
 
-                <Modal show={this.props.showData} onHide={this.props.modalData}></Modal>
+                <Modal show={modal} onHide={this.hideModal}></Modal>
                 <Modal.Dialog>
                     <Modal.Header closeButton>
                         <Modal.Title>{this.props.title}</Modal.Title>

@@ -18,17 +18,17 @@ class App extends React.Component {
       modalData:{},
     };
   }
-  dataShow = (data) => {
+  dataShow = (dataShow) => {
     this.setState({ 
       show: true,
-      modalData:data,
+      modalData:dataShow,
 
     });
   }
-  dataClose = (data) =>{
+  dataClose = (dataShow) =>{
     this.setState({
       show:false,
-    });
+    })
   }
   
   render() {
@@ -36,7 +36,7 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <Main SelectedBeast ={this.dataShow} data ={this.state.honesData}/>
+          <Main SelectedBeast ={this.dataShow} dataShow ={this.state.honesData}/>
           <SelectedBeast dataClose={this.dataClose} showData={this.state.show} modalData={this.state.modalData} />
         </Container>
         <Footer />

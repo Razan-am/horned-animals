@@ -15,7 +15,7 @@ class HornedBeasts extends Component {
   }
 
   show = () => {
-    this.props.modalShow({
+    this.props.modal({
       title: this.props.title,
       image_url: this.props.img,
       description: this.props.description,
@@ -34,7 +34,7 @@ class HornedBeasts extends Component {
             </Card.Text>
             <Button variant="primary" onClick={this.increasing}>Likes</Button>
             <span text={'light'}>{this.state.likeNumber}</span>
-            <Button variant="danger" onClick={this.show}>Details</Button>
+            <Button variant="danger" onClick={this.props.dataClose}>Details</Button>
           </Card.Body>
         </Card>
       </Col>

@@ -14,12 +14,13 @@ class HornedBeasts extends Component {
     this.setState({ likeNumber: this.props.raisLikes(this.state.likeNumber) });
   }
 
-  show = () => {
-    this.props.modalShow({
-      title: this.props.title,
-      image_url: this.props.img,
-      description: this.props.description,
-    });
+  show = () =>{
+    this.props.modal({
+      title :this.props.title,
+      image_url:this.props.img,
+      description:this.props.description,
+
+  })
   }
 
   render() {

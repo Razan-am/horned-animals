@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button, Col } from 'react-bootstrap';
-import SelectedBeast from './SelectedBeast';
+import SelectedBeast from './SelectedBeast.js';
 
 class HornedBeasts extends Component {
   constructor(props) {
@@ -15,11 +15,11 @@ class HornedBeasts extends Component {
   }
 
   show = () => {
-    this.props.modalShow({
+    this.props.modal({
       title: this.props.title,
       image_url: this.props.img,
       description: this.props.description,
-    });
+    })
   }
 
   render() {

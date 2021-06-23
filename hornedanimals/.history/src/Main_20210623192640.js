@@ -20,14 +20,8 @@ class Main extends React.Component {
                  hornedBeastList.map((beast,index) =>{
                     return (
                     <HornedBeasts 
-                    key ={index} 
-                    title={beast.title} 
-                    image_url={beast.image_url} 
-                    likes={likes}
-                    likeNumber={0} 
-                    raisLikes={likeIncreas} 
-                    modalShow={this.propse.SelectedBeast} 
-                    description={beast.description} />
+                    key ={index} title={beast.title} image_url={beast.image_url} likes={likes}
+                    likeNumber={0} raisLikes={likeIncreas} modalShow={this.propse.SelectedBeast} description={beast.description} />
                     );
                  })
                 

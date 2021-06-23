@@ -28,7 +28,7 @@ class App extends React.Component {
   dataClose = (data) =>{
     this.setState({
       show:false,
-    });
+    })
   }
   
   render() {

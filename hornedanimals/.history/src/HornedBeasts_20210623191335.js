@@ -15,11 +15,11 @@ class HornedBeasts extends Component {
   }
 
   show = () => {
-    this.props.modalShow({
+    this.props.modal({
       title: this.props.title,
       image_url: this.props.img,
       description: this.props.description,
-    });
+    })
   }
 
   render() {
