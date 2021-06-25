@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-
+import HornedBeasts from './HornedBeasts';
 
 class SelectedBeast extends Component {
     render() {
         return (
             <>
-                <Modal show={this.props.showData}></Modal>
+                <Modal show={this.props.showData} onHide={this.props.modalData}></Modal>
                 <Modal.Dialog>
                     <Modal.Header closeButton>
                         <Modal.Title>{this.props.title}</Modal.Title>
@@ -19,6 +19,7 @@ class SelectedBeast extends Component {
                         <Button variant="secondary" onClick={this.props.handleExit}>Close</Button>
                     </Modal.Footer>
                 </Modal.Dialog>
+                <HornedBeasts/>
             </>
         );
     }

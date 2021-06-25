@@ -28,7 +28,7 @@ class Main extends React.Component {
                     likes={likes}
                     likeNumber={0} 
                     raisLikes={likeIncreas} 
-                    showModal={this.props.handleShow} 
+
                      />
                     );
                  })          

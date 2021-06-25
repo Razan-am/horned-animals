@@ -35,7 +35,7 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <Main handleShow ={this.handleShow} data ={this.state.honesData}/>
+          <Main selectedBeast ={this.handleShow} data ={this.state.honesData}/>
           <SelectedBeast handleExit={this.handleClose} showData={this.state.show} modalData={this.state.modalData} />
         </Container>
         <Footer />

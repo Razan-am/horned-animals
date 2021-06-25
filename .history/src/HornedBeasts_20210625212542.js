@@ -14,18 +14,16 @@ class HornedBeasts extends Component {
     this.setState({ likeNumber: this.props.raisLikes(this.state.likeNumber) });
   }
 
-  details = () => {
-    let data={
+  click = () => {
+    this.props.modal({
       title: this.props.title,
       image_url: this.props.image_url,
       description: this.props.description,
-    };
-    this.props.showModal(data);
+    });
   }
 
   render() {
     return (
-      <>
       <Col>
         <Card style={{ width: '18rem' }} bg={'dark'} text={'light'}>
           <Card.Title>{this.props.title}</Card.Title>
@@ -36,11 +34,10 @@ class HornedBeasts extends Component {
             </Card.Text>
             <Button variant="primary" onClick={this.increasing}>Likes</Button>
             <span text={'light'}>{this.state.likeNumber}</span>
-            <Button variant="danger" onClick={this.details}>Details</Button>
+            <Button variant="danger" onClick={this.click}>Details</Button>
           </Card.Body>
         </Card>
       </Col>
-      </>
     );
   }
 }

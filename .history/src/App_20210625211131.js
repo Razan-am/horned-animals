@@ -2,29 +2,31 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import HornedList from './data.json';
+import hornedBeastList from './data.json';
 import SelectedBeast from './SelectedBeast';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
+import HornedBeasts from './HornedBeasts';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      honesData:HornedList,
+      honesData:HornedBeasts,
       show: false,
       modalData:{},
     };
   }
-  handleShow = (data) => {
+  dataShow = (data) => {
     this.setState({ 
       show: true,
       modalData:data,
 
     });
   }
-  handleClose = () =>{
+  dataClose = (data) =>{
     this.setState({
       show:false,
     });
@@ -35,8 +37,8 @@ class App extends React.Component {
       <>
         <Header />
         <Container>
-          <Main handleShow ={this.handleShow} data ={this.state.honesData}/>
-          <SelectedBeast handleExit={this.handleClose} showData={this.state.show} modalData={this.state.modalData} />
+          <Main SelectedBeast ={this.dataShow} data ={this.state.honesData}/>
+          <SelectedBeast dataClose={this.dataClose} showData={this.state.show} modalData={this.state.modalData} />
         </Container>
         <Footer />
       </>

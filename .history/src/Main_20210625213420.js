@@ -1,5 +1,7 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts.js';
+import SelectedBeast from './SelectedBeast.js';
+import hornedBeastList from './data.json';
 import { Row } from 'react-bootstrap';
 
 
@@ -18,7 +20,7 @@ class Main extends React.Component {
             <Row>
                 {
 
-                 this.props.data.map((beast,index) =>{
+                 hornedBeastList.map((beast,index) =>{
                     return (
                     <HornedBeasts 
                     key ={index} 
@@ -28,12 +30,13 @@ class Main extends React.Component {
                     likes={likes}
                     likeNumber={0} 
                     raisLikes={likeIncreas} 
-                    showModal={this.props.handleShow} 
+                    modal={this.props.selectedBeast} 
                      />
                     );
                  })          
                 }
             </Row>
+            <SelectedBeast/>
             </>
         );
     }

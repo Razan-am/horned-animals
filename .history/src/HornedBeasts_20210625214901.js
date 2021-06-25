@@ -20,7 +20,7 @@ class HornedBeasts extends Component {
       image_url: this.props.image_url,
       description: this.props.description,
     };
-    this.props.showModal(data);
+    this.props.modal(data);
   }
 
   render() {
