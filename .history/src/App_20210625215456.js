@@ -3,8 +3,6 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import HornedList from './data.json';
-import SelectedBeast from './SelectedBeast';
-import FormBeast from './FormBeast';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
@@ -30,16 +28,14 @@ class App extends React.Component {
       show:false,
     });
   }
-
+  
   render() {
     return (
       <>
         <Header />
         <Container>
-          <Main handlerSelect={this.handlerSelect}/>
-          <Main handleShow ={this.handleShow} data ={this.state.honesData} />
+          <Main handleShow ={this.handleShow} data ={this.state.honesData}/>
           <SelectedBeast handleExit={this.handleClose} showData={this.state.show} modalData={this.state.modalData} />
-          <FormBeast/>
         </Container>
         <Footer />
       </>
