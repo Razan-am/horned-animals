@@ -3,6 +3,9 @@ import HornedBeasts from './HornedBeasts.js';
 import HornedList from './data.json';
 import { Row } from 'react-bootstrap';
 
+
+
+
 class Main extends React.Component {
     constructor(){
         super();
@@ -25,7 +28,7 @@ class Main extends React.Component {
             <Row>
                 {
 
-                    HornedList.map((beast,index) =>{
+HornedList.map((beast,index) =>{
                     return ((this.state.beastHorns) === beast.horns &&
                     <HornedBeasts key ={index} title={beast.title} image_url={beast.image_url} description={beast.description}likes={likes}likeNumber={0} raisLikes={likeIncreas} showModal={this.props.handleShow} />) || ((this.state.beastHorns) === 0 && <HornedBeasts key ={index} title={beast.title} image_url={beast.image_url} description={beast.description}likes={likes}likeNumber={0} raisLikes={likeIncreas} showModal={this.props.handleShow} />);
                  })          
