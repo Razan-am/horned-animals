@@ -31,17 +31,17 @@ class App extends React.Component {
     });
   }
 
+
   render() {
     return (
       <>
-        <Header />
+
         <Container>
           <Main handlerSelect={this.handlerSelect}/>
           <Main handleShow ={this.handleShow} data ={this.state.honesData} />
           <SelectedBeast handleExit={this.handleClose} showData={this.state.show} modalData={this.state.modalData} />
           <FormBeast/>
         </Container>
-        <Footer />
       </>
     );
   }
